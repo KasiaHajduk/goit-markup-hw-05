@@ -118,7 +118,13 @@ img {
   line-height: 1.142;
   letter-spacing: 0.02em;
   color: #212121;
+  transition: 250500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.navigation__link:hover,
+.navigation__link:focus{
+  color: var(--main-color);
+}
+
 
 .header__phone-number,
 .header__email {
@@ -128,20 +134,14 @@ img {
   letter-spacing: 0.02em;
   color: #757575;
   margin-left: 10px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation__link:hover,
-.navigation__link:focus,
+
 .header__phone-number:hover,
 .header__email:hover,
 .header__phone-number:focus,
-.header__email:focus,
-.address__link:hover,
-.address__link:focus,
-.footer__email:hover,
-.footer__email:focus,
-.footer__phone-number:hover,
-.footer__phone-number:focus
+.header__email:focus
 {
   color: var(--main-color);
   stroke: var(--main-color);
@@ -157,7 +157,7 @@ img {
 .telephone{
   width: 16px;
   height: 12px;
-  /* margin-right: 10px; */
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .envelope:hover,
 .envelope:focus,
@@ -177,7 +177,11 @@ img {
   height: 600px;
   width: 1600px;
   margin: 0 auto;
-  background-image: url("../images/hego-bg.jpg");
+  background-image: url('./images/hero-bg.jpg');
+  /* background-image: linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url('/images/hero-bg.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #2F303A66;
@@ -292,9 +296,43 @@ img {
   display: flex;
   justify-content: space-between;
 }
+.gallery__item-photo{
+  width: 370px;
+  height: 294px;
+}
 .gallery__list-item:not(:last-child) {
-    margin-right: 30px;
-  }
+  margin-right: 30px;
+}
+
+.gallery__list-item{
+  position: relative;
+}
+.gallery__img{
+  /* position: absolute; */
+  z-index:0;
+}
+
+.gallery__descryption{
+  /* position: absolute; */
+  z-index:1;
+}
+
+.gallery__descryption{
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.142;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  /* color: red; */
+  padding-top: 27px;
+  padding-bottom: 27px;
+  /* background-color: rgba(47, 48, 58, 0.8); */
+  background: #2F303ACC;
+  width: 370px;
+
+}
 
 /*****  END GALLERY   *******/
 
@@ -369,6 +407,7 @@ border-radius: 0px 0px 4px 4px;
   align-items: center;
   justify-content: center;
   fill: #AFB1B8;
+  transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon{
@@ -406,6 +445,7 @@ border-radius: 0px 0px 4px 4px;
   border-radius: 4px;
   align-items: center;
   justify-content: center;
+  transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients__list-link:focus,
@@ -450,6 +490,7 @@ border-radius: 0px 0px 4px 4px;
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #ffffff99;
+  transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address__link {
@@ -459,6 +500,7 @@ border-radius: 0px 0px 4px 4px;
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #ffffff;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address__link:focus,
@@ -501,6 +543,7 @@ border-radius: 0px 0px 4px 4px;
   align-items: center;
   justify-content: center;
   fill: #ffffff;
+  transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer__social-list-item:not(:last-child) {
   margin-right: 10px;
@@ -542,6 +585,7 @@ border-radius: 0px 0px 4px 4px;
   border-radius: 4px;
   border: 0px;
   cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .a,
 .button 
@@ -579,7 +623,12 @@ border-radius: 0px 0px 4px 4px;
   background-color: #FFFFFF;
   border: 1px solid #EEEEEE;
   cursor: pointer;
-  /* align-items: center; */
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio__card-wrapper:focus,
+.portfolio__card-wrapper:hover{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio__card:nth-child(3n+1){
@@ -617,8 +666,5 @@ border-radius: 0px 0px 4px 4px;
 }
 
  
-.portfolio__card-wrapper:focus,
-.portfolio__card-wrapper:hover{
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
      
