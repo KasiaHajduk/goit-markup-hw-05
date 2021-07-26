@@ -122,25 +122,32 @@ img {
 .navigation__link:focus{
   color: var(--main-color);
 }
-
+.menu_index{
+  position: relative;
+}
 .menu_index::after{
+  position: absolute;
   display: flex;
   content: "";
   width: 53px;
   height: 4px;
   background: #2196F3;
   border-radius: 2px;
-  pmargin-top: 32px;
+  margin-top: 28px;
 }
 
+.menu_portfolio{
+  position: relative;
+}
 .menu_portfolio::after{
+  position: absolute;
   display: flex;
   content: "";
   width: 58px;
   height: 4px;
   background-color: #2196F3;
   border-radius: 2px;
-  margin-top: 32px;
+  margin-top: 28px;
 }
 
 .header__phone-number,
@@ -195,7 +202,7 @@ img {
   height: 600px;
   width: 1600px;
   margin: 0 auto;
-  background-image: url('./images/hero-bg.jpg');
+  background-image: url("./images/hero-bg.jpg");
   /* background-image: linear-gradient(
     rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)),
@@ -643,12 +650,23 @@ border-radius: 0px 0px 4px 4px;
   border: 1px solid #EEEEEE;
   cursor: pointer;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
+}
+.portfolio__card-wrapper::after{
+  content:"Technocrack jest popularną platformą wykorzystywaną do rozpowszechniania koronawirusa. Firmy wykorzystują tę platformę do celów szpiegowskich i ataków na niezabezpieczone serwery konkurencji";
+  padding-top: 49px;
+  padding-right: 24px;
+  padding-left: 45px;
+  padding-bottom: 49px;
+}
 .portfolio__card-wrapper:focus,
 .portfolio__card-wrapper:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
+  }
+
+
+
 
 .portfolio__card:nth-child(3n+1){
   margin-right: 30px;
