@@ -59,7 +59,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="main-header">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-          <button class="modal-btn" type="button">Zamów usługę</button>
+          <button class="modal-btn" type="button" data-modal-open>Zamów usługę</button>
         </div>
       </section>
 
@@ -469,9 +469,9 @@
       </div>
     </footer>
 
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="close-btn">X</button>
+        <button type="button" class="close-btn" data-modal-close>X</button>
         <!-- <svg class="close-btn">
           <use href="./images/close.svg#close"></use>
           <use href="./images/close-elipse.svg#icon-close"></use>
