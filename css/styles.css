@@ -137,6 +137,7 @@ img {
 .menu_portfolio {
   position: relative;
 }
+
 .menu_portfolio::after {
   position: absolute;
   display: flex;
@@ -191,18 +192,15 @@ img {
 /*****END HEADER*****/
 
 /*****HERO*****/
-.hero {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
+.hero .container {
   height: 600px;
   width: 1600px;
-  margin: 0 auto;
-  background-image: url("./images/hero-bg.jpg");
-  /* background-image: linear-gradient(
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)),
-    url('/images/hero-bg.jpg'); */
+  /* background: url("../images/hero.png"); */
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("/images/hero.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #2f303a66;
@@ -734,10 +732,8 @@ img {
   align-items: center;
   justify-content: center;
   transform-origin: center center;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 5s ease-out;
-  /* transform: ; */
-  
+  transform: translate(-50%, -50%);
+  transition: transform 2s ease-out;
 }
 
 .close-btn {
@@ -749,9 +745,9 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: transparent;
-   cursor: pointer;
+  cursor: pointer;
 }
-.close-btn-svg{
+.close-btn-svg {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -778,6 +774,5 @@ img {
 }
 
 .is-hidden .modal {
- transform: scale(0.5);
+  transform: rotate(90deg);
 }
-
